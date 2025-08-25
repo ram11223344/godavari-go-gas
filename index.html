@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Godavari Go Gas Agency</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <style>
     :root {
       --red: #e53935;
@@ -13,233 +12,104 @@
       --card-bg: #fff;
       --accent: #e53935;
       --text-dark: #212121;
-      --text-light: #fff;
-      --shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    }
-    * {
-      box-sizing: border-box;
+      --text-light: #f8fff5;
     }
     body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: var(--background);
-      color: var(--text-dark);
-      line-height: 1.5;
+      font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0;
+      background: var(--background); color: var(--text-dark);
     }
     header {
       background: linear-gradient(90deg, var(--red) 60%, var(--green) 100%);
-      padding: 1rem;
-      text-align: center;
-      font-weight: 700;
-      font-size: 2rem;
-      color: var(--text-light);
-      letter-spacing: 2px;
+      padding: 1rem; text-align: center; font-weight: bold;
+      font-size: 2rem; color: var(--text-light); letter-spacing: 2px;
       box-shadow: 0 6px 18px -8px var(--red), 0 2px 8px var(--green);
-      position: relative;
     }
-    header img.logo {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 40px;
+    main { padding: 2rem 1rem; max-width: 700px; margin: auto; }
+    h1 { font-weight: bold; color: var(--red); margin-bottom: 0.5rem;}
+    h2 { color: var(--green); margin-bottom: 1rem;}
+    p { margin-bottom: 0.5rem; }
+    .card {
+      background: var(--card-bg); padding:1.5rem 1.25rem; margin-top:2rem;
+      border-radius: 14px; box-shadow: 0 8px 18px -8px var(--green), 0 0 0 1px #eee;
     }
-    main {
-      max-width: 720px;
-      margin: 2rem auto 4rem;
-      padding: 0 1rem;
+    form label { font-weight: 500; margin-top:1rem; display: block; color: var(--green);}
+    input, textarea {
+      width: 100%; padding: 0.7rem; border-radius: 6px; border: 1px solid #ccc;
+      margin-top: 0.3rem; margin-bottom:1rem; font-size:1rem; font-family: inherit;
     }
-    .hero-banner {
-      width: 100%;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      margin-bottom: 2rem;
-    }
-    .hero-banner img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    h1 {
-      color: var(--red);
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    h2 {
-      color: var(--green);
-      margin-bottom: 1rem;
-    }
-    form {
-      background: var(--card-bg);
-      padding: 2rem;
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      max-width: 480px;
-      margin: 0 auto;
-    }
-    form label {
-      display: block;
-      font-weight: 600;
-      margin-top: 1rem;
-      color: var(--green);
-    }
-    form input[type="tel"],
-    form textarea {
-      width: 100%;
-      padding: 0.7rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      margin-top: 0.3rem;
-      font-size: 1rem;
-      font-family: inherit;
-      transition: border-color 0.2s;
-    }
-    form input[type="tel"]:focus,
-    form textarea:focus {
-      border-color: var(--red);
-      outline: none;
-      box-shadow: 0 0 6px var(--red);
-    }
-    form button {
-      margin-top: 1.5rem;
-      background: var(--green);
-      color: var(--text-light);
-      border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      letter-spacing: 1px;
+    button {
+      background: var(--green); color: var(--text-light); border:none;
+      padding: 0.8rem 2rem; border-radius:8px; font-size:1.1rem;
+      font-weight: bold; cursor:pointer; letter-spacing:1px;
       box-shadow: 0 2px 8px var(--red) inset;
-      transition: background 0.15s;
+      transition: background 0.18s;
     }
-    form button:hover {
-      background: var(--red);
+    button:hover { background: var(--red);}
+    .contact-info {
+      margin-top:2rem; padding:1rem 1.25rem; border-radius:10px;
+      background: linear-gradient(90deg,#fff 80%,#e2ffe0 100%);
+      box-shadow:0 2px 12px -6px var(--green);
     }
-    .bookwa {
-      display: block;
-      max-width: 230px;
-      margin: 1rem auto 2rem;
-      background: var(--red);
-      color: var(--text-light);
-      padding: 0.8rem 1.3rem;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 1px 8px var(--green);
+    .contact-info h2 { color: var(--red);}
+    .contact-info a { color: var(--green); text-decoration:underline;}
+    .address-box {
+      margin-top:1.2rem; background:var(--green); color:var(--text-light); padding:1rem;
+      border-radius:10px; font-size:1.1rem;
+    }
+    .whatsapp-tab {
+      position: fixed; bottom: 32px; right: 32px; z-index:100; display: flex; align-items: center;
+      background: var(--green); color: var(--text-light); border-radius: 28px;
+      box-shadow:0 2px 24px -8px var(--red); padding: 0.8rem 1.3rem; font-weight:bold;
+      font-size: 1.1rem; cursor: pointer; text-decoration: none;
       transition: background 0.2s;
     }
-    .bookwa:hover {
-      background: var(--green);
-    }
-    .contact-info {
-      background: linear-gradient(90deg, #fff 80%, #e2ffe0 100%);
-      box-shadow: 0 2px 12px -6px var(--green);
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
-      max-width: 480px;
-      margin: 2rem auto 0;
-      text-align: center;
-      font-size: 1.1rem;
-      color: var(--text-dark);
-      box-sizing: border-box;
-    }
-    .contact-info h2 {
-      color: var(--red);
-      margin-bottom: 1rem;
-    }
-    .contact-info a {
-      color: var(--green);
-      text-decoration: underline;
-    }
-    .address-box {
-      margin-top: 1.2rem;
-      background: var(--green);
-      color: var(--text-light);
-      padding: 1rem;
-      border-radius: 10px;
-      font-size: 1.1rem;
-    }
-    iframe {
-      border-radius: 12px;
-      width: 100%;
-      height: 300px;
-      margin-top: 1rem;
-      border: none;
-      box-shadow: var(--shadow);
-    }
-    /* Icon styles */
-    .contact-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin: 6px 0;
-    }
-    .contact-item svg {
-      width: 22px;
-      height: 22px;
-      fill: var(--green);
-    }
-    /* Responsive */
-    @media (max-width: 600px) {
-      main, .contact-info, form {
-        padding: 1rem;
-        max-width: 100%;
-      }
+    .whatsapp-tab:hover { background: var(--red);}
+    .whatsapp-tab svg { margin-right: 0.6rem; vertical-align: middle; }
+    @media (max-width:530px) {
+      main {padding: 1rem 0.3rem;}
+      .card,.contact-info {padding:1rem 0.7rem;}
+      .address-box{padding:0.8rem;}
+      .whatsapp-tab{bottom:18px;right:18px;padding:0.7rem 1rem;}
     }
   </style>
 </head>
 <body>
-  <header>
-    <img class="logo" src="assets/logo.png" alt="Godavari Go Gas Agency Logo" />
-    Godavari Go Gas Agency
-  </header>
+  <header>Godavari Go Gas Agency</header>
   <main>
-    <div class="hero-banner">
-      <img src="assets/hero.jpg" alt="LPG Cylinder Delivery" />
-    </div>
-
     <h1>Book 19.2kg LPG Cylinder</h1>
-    <form action="https://formspree.io/f/xyzpqbpv" method="POST">
-      <input type="hidden" name="Cylinder Type" value="19.2kg">
-      <label for="mobile">Mobile Number:</label>
-      <input id="mobile" type="tel" name="Mobile Number" placeholder="Enter your mobile number" required />
-      <label for="address">Delivery Address:</label>
-      <textarea id="address" name="Address" rows="3" placeholder="Enter your full address" required></textarea>
-      <button type="submit">Book Cylinder</button>
-    </form>
-
-    <a class="bookwa" target="_blank"
-      href="https://wa.me/919640648468?text=I%20want%20to%20book%20a%2019.2kg%20Go%20Gas%20cylinder.%20My%20details%20are%20[enter%20address%20here]">
-      Book via WhatsApp
-    </a>
-
-    <section class="contact-info" aria-label="Contact Information">
+    <p>Fast, safe doorstep delivery from your trusted Go Gas supplier.</p>
+    <div class="card">
+      <h2>Book Online</h2>
+      <form action="https://formspree.io/f/xyzpqbpv" method="POST">
+        <input type="hidden" name="Cylinder Type" value="19.2kg">
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="Mobile Number" placeholder="Enter your mobile number" required>
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="Address" rows="3" placeholder="Enter full address" required></textarea>
+        <button type="submit">Book Cylinder</button>
+      </form>
+      <div style="margin-top:2rem;">
+        <a href="https://wa.me/919640648468?text=I%20want%20to%20book%20a%2019.2kg%20Go%20Gas%20cylinder.%20My%20details%20are%20[enter%20address%20here]" target="_blank"
+        style="background:var(--red);display:inline-block;color:var(--text-light);padding:0.8rem 1.3rem;border-radius:8px;text-decoration:none;font-weight:bold;box-shadow:0 1px 8px var(--green);margin-right:10px;">
+        WhatsApp Booking</a>
+      </div>
+    </div>
+    <div class="contact-info">
       <h2>Contact Us</h2>
-      <div class="contact-item">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.48 11.48 0 003.6.58 1 1 0 011 1v3.53a1 1 0 01-1 1A18 18 0 013 5a1 1 0 011-1h3.54a1 1 0 011 1 11.48 11.48 0 00.58 3.6 1 1 0 01-.5 1.1z"/></svg>
-        <a href="tel:+919640648468">9640648468</a>
-      </div>
-      <div class="contact-item">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 8l7.89 5.26a3 3 0 003.22 0L22 8v9a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M22 6a2 2 0 00-2-2H4a2 2 0 00-2 2v1l10 6 10-6z"/></svg>
-        <a href="mailto:godavarigogasagency@gmail.com">godavarigogasagency@gmail.com</a>
-      </div>
+      <p>Phone 1: <a href="tel:+919640648468">9640648468</a></p>
+      <p>Phone 2: <a href="tel:+917780213857">7780213857</a></p>
+      <p>Email: <a href="mailto:godavarigogasagency@gmail.com">godavarigogasagency@gmail.com</a></p>
       <div class="address-box">
-        Office Address: <br />
+        Office Address: <br>
         <a href="https://share.google/nJx5x9Vs1nAXlPh82" target="_blank" style="color:#fff;text-decoration:underline;">
           H295+GR Amalapuram, Andhra Pradesh
         </a>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.735573389923!2d82.07035627447561!3d16.536285822922465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fb45984ab3b1%3A0x18637b45b94fda49!2sAmalapuram!5e0!3m2!1sen!2sin!4v1692968605291!5m2!1sen!2sin"
-          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          title="Godavari Go Gas Agency Office Location"></iframe>
       </div>
-    </section>
+    </div>
   </main>
+  <a href="https://wa.me/919640648468?text=I%20want%20to%20book%20a%2019.2kg%20Go%20Gas%20cylinder." class="whatsapp-tab" target="_blank">
+    <svg height="22" viewBox="0 0 32 32" width="22"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.941.794 5.749 2.299 8.226l-2.026 6.908 7.092-2.008C11.832 30.851 13.889 31.5 16 31.5c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff"/><path d="M27.003 24.302l-1.375-4.713a1.006 1.006 0 00-.96-.731h-.001c-.494 0-.909.367-.986.85-.668 4.193-5.591 6.323-10.13 5.612-4.542-.711-8.065-5.352-7.393-9.547.06-.38-.222-.739-.602-.799a.985.985 0 00-.799.601c-.759 4.849 2.724 9.102 7.867 9.823a10.937 10.937 0 001.692.128c5.545 0 10.523-2.447 10.374-5.952z" fill="#388e3c"/></svg>
+    WhatsApp
+  </a>
 </body>
 </html>
