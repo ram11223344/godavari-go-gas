@@ -4,60 +4,198 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Godavari Go Gas Agency</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
   <style>
-    /* Fallback styles in case external CSS doesn't load */
     body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0; background: #f8fff5; color: #212121; line-height: 1.5;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
     }
     header {
-      background: linear-gradient(90deg, #e53935 60%, #388e3c 100%);
-      padding: 1rem; text-align: center; color: white; font-weight: 700; letter-spacing: 2px;
-      box-shadow: 0 6px 18px -8px #e53935, 0 2px 8px #388e3c;
-      position: sticky; top: 0; z-index: 100;
+      background: #fff;
+      padding: 15px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      flex-wrap: wrap;
     }
-    header img.logo {
-      height: 40px; vertical-align: middle; margin-right: 12px;
+    .contact-info {
+      font-size: 0.9em;
+    }
+    .contact-info a {
+      color: #b71c1c;
+      text-decoration: none;
+      margin-left: 8px;
+    }
+    nav {
+      background: #fff;
+      padding: 10px 8%;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      border-bottom: 2px solid #b71c1c;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      padding: 8px 12px;
+    }
+    nav a:hover {
+      color: #b71c1c;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 8%;
+      background: #f9f9f9;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      max-width: 500px;
+      margin-bottom: 20px;
+    }
+    .hero-text h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #b71c1c;
+    }
+    .enquire-btn {
+      background: #b71c1c;
+      color: white;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+    .hero img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 12px;
     }
     main {
-      max-width: 900px; margin: 2rem auto 4rem; padding: 0 1rem;
+      padding: 40px 8%;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #b71c1c;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #b71c1c;
+      padding-bottom: 6px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 400px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      resize: vertical;
+    }
+    button[type="submit"] {
+      background: #b71c1c;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 1.1em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background: #7f1212;
+    }
+    .contact-details p {
+      margin: 6px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 12px;
+    }
+    @media (max-width: 700px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero img {
+        margin: auto;
+        max-width: 250px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="Godavari Go Gas Agency Logo" class="logo" />
-    Godavari Go Gas Agency
+    <div class="logo">
+      <h1 style="color:#b71c1c; margin:0;">Godavari Go Gas Agency</h1>
+    </div>
+    <div class="contact-info">
+      <span>📞 9640648468, 7780213857</span>
+      <a href="mailto:godavarigogasagency@gmail.com">godavarigogasagency@gmail.com</a>
+    </div>
   </header>
+
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#services">SERVICES</a>
+    <a href="#about">ABOUT US</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Reliable & Efficient Cooking Gas Services</h1>
+      <button onclick="document.getElementById('enquiry-form').scrollIntoView({behavior:'smooth'})" class="enquire-btn">Enquire Now</button>
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/LPG_Cylinder_India.jpg/320px-LPG_Cylinder_India.jpg" alt="Cooking Gas Cylinder" />
+  </section>
+
   <main>
-    <section class="hero-banner">
-      <img src="assets/hero.jpg" alt="LPG Cylinder Delivery" style="width:100%;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.1);" />
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>We deliver LPG cylinders promptly and reliably throughout Andhra Pradesh. Our services include cylinder delivery, installation assistance, and safety checks.</p>
     </section>
 
-    <section id="booking" style="margin-top:2rem; background:#fff; padding:2rem; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.1); max-width:480px; margin-left:auto; margin-right:auto;">
-      <h1 style="color:#e53935; text-align:center; font-weight:700; letter-spacing:2px;">Book 19.2kg LPG Cylinder</h1>
-      <form action="https://formspree.io/f/xyzpqbpv" method="POST" style="margin-top:1rem;">
-        <input type="hidden" name="Cylinder Type" value="19.2kg" />
-        <label for="mobile" style="display:block; margin-top:1rem; color:#388e3c; font-weight:600;">Mobile Number:</label>
-        <input id="mobile" type="tel" name="Mobile Number" placeholder="Enter your mobile number" required style="width:100%; padding:0.7rem; border-radius:8px; border:1px solid #ccc; font-size:1rem; margin-top:0.3rem;" />
-        <label for="address" style="display:block; margin-top:1rem; color:#388e3c; font-weight:600;">Delivery Address:</label>
-        <textarea id="address" name="Address" rows="3" placeholder="Enter your full address" required style="width:100%; padding:0.7rem; border-radius:8px; border:1px solid #ccc; font-size:1rem; margin-top:0.3rem;"></textarea>
-        <button type="submit" style="margin-top:1.5rem; background:#388e3c; color:#fff; border:none; padding:0.8rem 2rem; border-radius:8px; font-size:1.1rem; font-weight:700; cursor:pointer; width:100%;">Book Cylinder</button>
-      </form>
-      <a href="https://wa.me/919640648468?text=I want to book a 19.2kg Go Gas cylinder. My details are [enter address here]" target="_blank" style="display:block; margin:1rem auto; max-width:230px; background:#e53935; color:#fff; padding:0.8rem 1.3rem; border-radius:8px; font-weight:bold; text-align:center; text-decoration:none; box-shadow:0 1px 8px #388e3c; transition:background 0.2s;">Book via WhatsApp</a>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Godavari Go Gas Agency is committed to providing safe, reliable, and efficient cooking gas services to our customers. We prioritize customer satisfaction and timely deliveries.</p>
     </section>
 
-    <section id="contact" style="margin-top:3rem; background: linear-gradient(90deg, #fff 80%, #e2ffe0 100%); box-shadow:0 2px 12px -6px #388e3c; border-radius:10px; padding:1rem 1.25rem; max-width:480px; margin-left:auto; margin-right:auto; text-align:center; font-size:1.1rem;">
-      <h2 style="color:#e53935; margin-bottom:1rem;">Contact Us</h2>
-      <p>Phone 1: <a href="tel:+919640648468" style="color:#388e3c; text-decoration:underline;">9640648468</a></p>
-      <p>Phone 2: <a href="tel:+917780213857" style="color:#388e3c; text-decoration:underline;">7780213857</a></p>
-      <p>Email: <a href="mailto:godavarigogasagency@gmail.com" style="color:#388e3c; text-decoration:underline;">godavarigogasagency@gmail.com</a></p>
-      <div style="margin-top:1.2rem; background:#388e3c; color:#fff; padding:1rem; border-radius:10px; font-size:1.1rem; box-shadow:0 6px 14px rgba(62,113,61,0.45);">
-        Office Address: <br />
-        <a href="https://share.google/nJx5x9Vs1nAXlPh82" target="_blank" style="color:#fff; text-decoration:underline;">H295+GR Amalapuram, Andhra Pradesh</a>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-details">
+        <p><strong>Phone:</strong> 9640648468, 7780213857</p>
+        <p><strong>Email:</strong> <a href="mailto:godavarigogasagency@gmail.com">godavarigogasagency@gmail.com</a></p>
+        <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/tXf8y4ya8jz9YtX4A" target="_blank" rel="noopener">View on Google Maps</a></p>
       </div>
+
+      <form id="enquiry-form" action="https://formspree.io/f/xpwlgnkg" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Enquiry</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Our Location</h2>
+      <iframe src="https://maps.google.com/maps?q=17.7134,83.2985&z=15&output=embed" allowfullscreen></iframe>
     </section>
   </main>
 </body>
